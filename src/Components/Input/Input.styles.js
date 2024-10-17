@@ -1,17 +1,16 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    inputContainer: {
-      flexDirection: 'row',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      marginBottom: 20,
-    },
-    input: {
-      flex: 1,
-      borderColor: '#ccc',
-      borderWidth: 1,
-      padding: 10,
-      marginRight: 10,
-    },
-  })
+  container: { // `Container` büyük harfle başlamamalı
+    flex: 1,
+    justifyContent: 'center', // Butonu alta taşımak için
+    padding: 20,
+    backgroundColor:"red",
+  },
+  input: {
+    borderColor: "#red",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: 20, // Input ile button arasında boşluk
+  },
+});

@@ -4,14 +4,16 @@ import styles from "./Input.styles"
 
 const TodoInput = ({ value, onChangeText, onAdd }) => {
   return (
-    <View style={styles.inputContainer}>
-      <TextInput 
+    <View style={styles.Container}>
+            
+                <TextInput 
         style={styles.input}
-        placeholder="Yeni bir todo ekle..."
+        placeholder="Yapılacak..."
         value={value}
         onChangeText={onChangeText}
       />
-      <Button title="Ekle" onPress={onAdd} />
+                <Button title="Ekle" onPress={onAdd} />
+
     </View>
   );
 };

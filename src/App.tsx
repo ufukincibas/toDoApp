@@ -40,17 +40,23 @@ function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Todo List</Text>
-      <TodoCounter count={activeTodosCount} />
-      <TodoInput 
-        value={newTodo}
-        onChangeText={setNewTodo}
-        onAdd={addTodo}
-      />
+
+      <View style={styles.body_container}>
+          <Text style={styles.header}>YAPILACAKLAR</Text>
+          <TodoCounter count={activeTodosCount} />
+      </View>
+
+     
       <TodoList 
         todos={todos} 
         onToggleComplete={toggleComplete} 
         onLongPress={handleLongPress}
+      />
+
+<TodoInput 
+        value={newTodo}
+        onChangeText={setNewTodo}
+        onAdd={addTodo}
       />
     </View>
   );
@@ -60,12 +66,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: "#283747",
   },
+  body_container: {
+    flexDirection:"row" , 
+    justifyContent: "space-between"
+    
+  } ,
+
   header: {
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
     marginBottom: 10,
+    color: "orange"
   }
 });
 
